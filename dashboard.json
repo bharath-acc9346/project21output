@@ -1,0 +1,71 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-southeast-1",
+        "title": "CPU Usage (%)",
+        "period": 300,
+        "metrics": [
+          ["Project21/UbuntuVM", "cpu_usage_user", "host", "AZLTT0222435e27", "cpu", "cpu-total"],
+          ["Project21/UbuntuVM", "cpu_usage_system", "host", "AZLTT0222435e27", "cpu", "cpu-total"],
+          ["Project21/UbuntuVM", "cpu_usage_iowait", "host", "AZLTT0222435e27", "cpu", "cpu-total"]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-southeast-1",
+        "title": "Memory Used (%)",
+        "period": 300,
+        "metrics": [
+          ["Project21/UbuntuVM", "mem_used_percent", "host", "AZLTT0222435e27"]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-southeast-1",
+        "title": "Root Disk Used (%)",
+        "period": 300,
+        "metrics": [
+          ["Project21/UbuntuVM", "disk_used_percent", "path", "/", "host", "AZLTT0222435e27", "device", "sda1", "fstype", "ext4"]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-southeast-1",
+        "title": "Network Traffic — eth0",
+        "period": 300,
+        "metrics": [
+          ["Project21/UbuntuVM", "net_bytes_recv", "host", "AZLTT0222435e27", "interface", "eth0", {"stat": "Sum"}],
+          ["Project21/UbuntuVM", "net_bytes_sent", "host", "AZLTT0222435e27", "interface", "eth0", {"stat": "Sum"}]
+        ]
+      }
+    }
+  ]
+}
